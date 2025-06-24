@@ -5,6 +5,7 @@ const container = document.createElement("div");
 container.classList.add("container");
 container.style.cssText = "height: 544px; width: 544px; display:flex; flex-wrap: wrap; border: 15px solid red";
 btn.textContent = "reset"
+
 for (let i = 0; i< 16; i++){
     for (let j = 0; j< 16; j++){
     const square = document.createElement("div");
@@ -21,6 +22,7 @@ for (let i = 0; i< 16; i++){
 }
 
 btn.addEventListener("click", function(){
+    body.removeChild(container);
     const horiz = prompt("Enter the num of squares for horizontal side ")
     const vert = prompt("Enter the num of squares for vertical size ")
 })
