@@ -23,8 +23,14 @@ for (let i = 0; i< 16; i++){
 
 btn.addEventListener("click", function(){
     body.removeChild(container);
-    const horiz = prompt("Enter the num of squares for horizontal side ");
-    const vert = prompt("Enter the num of squares for vertical size ");
+    let horiz = prompt("Enter the num of squares for horizontal side: ");
+    while(horiz>100 || horiz <= 0 || isNaN(horiz)){
+        horiz = prompt("Please enter a valid num from 1-100 for horizontal side:")
+    }
+    let vert = prompt("Enter the num of squares for vertical size ");
+    while (vert > 100 || vert <= 0 || isNaN(vert)) {
+    vert = prompt("Please enter a valid num from 1-100 for vertical side:");
+}
     container = document.createElement("div");
 
 
