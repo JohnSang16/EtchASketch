@@ -8,10 +8,19 @@ for (let i = 0; i< 16; i++){
     for (let j = 0; j< 16; j++){
     const square = document.createElement("div");
     square.classList.add("square");
-    square.style.cssText = "height: 32px; width: 32px; border:1px solid black;"
+
+    square.addEventListener("mouseover", function(){
+    square.style.backgroundColor = "black";
+});
+
+
+    square.style.cssText = "height: 32px; width: 32px; border:1px solid black;background-color:white; "
     container.appendChild(square);
     }
 }
-console.log("hello")
+
+
+
+
 
 body.appendChild(container);
